@@ -40,6 +40,7 @@ export default function SinglePost() {
   return (
     <div>
       <h1>{singlePost.title}</h1>
+      <h2>Single post</h2>
       <BlockContent
         blocks={singlePost.body}
         projectId={"8ab8bcjd"}
