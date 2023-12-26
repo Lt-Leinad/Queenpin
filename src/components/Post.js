@@ -31,7 +31,7 @@ export default function Post() {
       <div>
         {postData &&
           postData.map((post, index) => (
-            <Link to={"/" + post.slug.current} key={post.slug.current}>
+            <Link to={"/post/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
                 <img src={post.mainImage.asset.url} alt="" />
                 <span>
