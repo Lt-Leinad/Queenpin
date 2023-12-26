@@ -44,6 +44,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'snippet',
+      title: 'Snippet',
+      type: 'string',
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
