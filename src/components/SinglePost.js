@@ -1,13 +1,14 @@
+import "../postStyle.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import imageUrlBuilder from "@sanity/image-url";
+import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import client from "../client";
 
-// const builder = imageUrlBuilder(client);
-// function urlFor(source) {
-//   return builder.image(source);
-// }
+const builder = imageUrlBuilder(client);
+function urlFor(source) {
+  return builder.image(source);
+}
 
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState(null);
@@ -19,7 +20,9 @@ export default function SinglePost() {
         `*[slug.current == "${slug}"]{
       title, 
       _id, 
-      slug, 
+      slug,
+      publishedAt, 
+      readTime,
       mainImage{
         asset->{
           _id, 
@@ -38,9 +41,27 @@ export default function SinglePost() {
   if (!singlePost) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="body">
+      <div className="top-bar">
+        <div className="details">
+          <img
+            className="author-pic"
+            src={urlFor(singlePost.authorImage).url()}
+            alt={singlePost.name}
+          />
+          <div className="author">
+            <p className="authorName">{singlePost.name}</p>
+            <p className="time">
+              {new Date(Date.parse(singlePost.publishedAt)).toLocaleDateString(
+                "en-us",
+                { month: "short", day: "numeric" }
+              )}{" "}
+              - {singlePost.readTime} read
+            </p>
+          </div>
+        </div>
+      </div>
       <h1>{singlePost.title}</h1>
-      <h2>Single post</h2>
       <BlockContent
         blocks={singlePost.body}
         projectId={"8ab8bcjd"}

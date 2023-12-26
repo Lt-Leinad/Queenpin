@@ -9,7 +9,7 @@ export default function Navbar() {
           <NavLink to="/" exact="true">
             Home
           </NavLink>
-          <NavLink to="/post">Blog Posts</NavLink>
+          <NavLink to="/post">Blog</NavLink>
           <NavLink to="/project">Projects</NavLink>
           <NavLink to="/about">About</NavLink>
         </nav>
