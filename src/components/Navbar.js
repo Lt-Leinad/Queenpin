@@ -1,5 +1,5 @@
 import React from "react";
-import "../Navbar.css";
+import "../components/Navbar.css";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
       </div>
       <div className="header-mob">
         <a href="/" aria-label="Home Page">
-          <img id="logo" src="/photos/QueenpinLogo.webp" alt="Queenpin Logo" />
+          <img id="logo" src="/images/QueenpinLogo.webp" alt="Queenpin Logo" />
         </a>
         <button className="hamburger" aria-label="Menu Button">
           <i className="fa-solid fa-bars"></i>
