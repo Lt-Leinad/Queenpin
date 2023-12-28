@@ -1,0 +1,45 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: calc(var(--spacer)/2);
+}
+
+.about-body img {
+    width: 100vw;
+    aspect-ratio: 1365/1079;
+    max-width: 1000px;
+}
+
+.about-body .text {
+    width: 90vw;
+    max-width: 1000px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-body .text h1 {
+    color: var(--black);
+    font: normal normal normal 15px/1.875em helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-size: 36px;
+    line-height: 1.875em;
+}
+
+.about-body .text p {
+    font-size: 20px;
+    line-height: 1.875em;
+    color: var(--black);
+    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+}

@@ -71,12 +71,19 @@ export default function SinglePost() {
           </div>
         </div>
         <h1>{singlePost.title}</h1>
-        <BlockContent
-          blocks={singlePost.body}
-          projectId={"8ab8bcjd"}
-          dataset={"production"}
-          className={"block-content"}
-        />
+        <div className="block-content">
+          {singlePost.body.map((el, index) => (
+            <BlockContent
+              key={index}
+              blocks={el}
+              projectId={"8ab8bcjd"}
+              dataset={"production"}
+              imageOptions={{
+                w: Number(el.size) ? Number(el.size) : 375,
+              }}
+            />
+          ))}
+        </div>
       </div>
       <div className="blog-socials">
         <Link className="socials-contact" to={"/"}>

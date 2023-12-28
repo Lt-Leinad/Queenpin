@@ -17,7 +17,7 @@ export default function Navbar() {
             </NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/about">Services</NavLink>
-            <NavLink to="/about">Testimonials</NavLink>
+            <NavLink to="/testimonials">Testimonials</NavLink>
             <NavLink to="/post">Blog</NavLink>
             <NavLink to="/post">Contact</NavLink>
           </ul>

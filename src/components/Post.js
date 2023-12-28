@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import client from "../client";
 import "../components/blogPageStyles.css";
 import imageUrlBuilder from "@sanity/image-url";
@@ -9,8 +9,11 @@ function urlFor(source) {
   return builder.image(source);
 }
 
+let constPostData;
+
 export default function Post() {
   const [postData, setPost] = useState(null);
+  const searchBarInput = useRef();
 
   useEffect(() => {
     client
@@ -30,12 +33,42 @@ export default function Post() {
         }
     }`
       )
-      .then((data) => setPost(data))
+      .then((data) => {
+        constPostData = data;
+        setPost(data);
+      })
       .catch(console.error);
   }, []);
 
+  const searchFunc = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
+    setPost(
+      constPostData.filter(
+        (x) =>
+          x.title
+            .toUpperCase()
+            .includes(searchBarInput.current.value.toUpperCase()) ||
+          x.snippet
+            .toUpperCase()
+            .includes(searchBarInput.current.value.toUpperCase())
+      )
+    );
+  };
+
   return (
     <div className="body">
+      <form className="searchBar">
+        <input
+          ref={searchBarInput}
+          onChange={searchFunc}
+          onKeyDown={searchFunc}
+          className="searchBarInput"
+          type="text"
+          placeholder="Search"
+        ></input>
+      </form>
       {postData &&
         postData.map((post, index) => (
           <Link to={"/post/" + post.slug.current} key={post.slug.current}>

@@ -30,7 +30,10 @@ export default defineType({
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [
+        {title: 'Bullet', value: 'bullet'},
+        {title: 'Numbered', value: 'number'},
+      ],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -60,8 +63,39 @@ export default defineType({
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     defineArrayMember({
+      title: 'Image',
       type: 'image',
-      options: {hotspot: true},
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Description of the image for screen readers',
+          description: 'Describe the image',
+          type: 'string',
+          initialValue: 'This is an image',
+        },
+        {
+          name: 'size',
+          title: 'Size',
+          type: 'string',
+          initialValue: 'Small',
+          options: {
+            layout: 'radio',
+            list: [
+              {
+                value: '375',
+                title: 'Small',
+              },
+              {
+                value: '750',
+                title: 'Large',
+              },
+            ],
+          },
+        },
+      ],
     }),
   ],
 })
