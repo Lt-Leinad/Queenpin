@@ -3,9 +3,9 @@ import "../components/About.css";
 
 export default function About() {
   return (
-    <div class="about-body">
+    <div className="about-body">
       <img src="/images/Dev_Profile.webp" alt="Devorah Gurevich" />
-      <div class="text">
+      <div className="text">
         <h1>Hi, I'm Devorah!</h1>
         <p>
           I started Queen Pin knowing that many businesses were dedicated to

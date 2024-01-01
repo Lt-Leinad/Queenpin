@@ -32,6 +32,10 @@ font-display: block;
 font-display: block;
 }
 
+:root {
+  --spacer: 40px;
+}
+
 * {
 margin: 0;
 padding: 0;
@@ -46,9 +50,9 @@ margin-inline: auto;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(auto, 1fr);
-gap: 40px;
+gap: var(--spacer);
 padding-top: 80px;
-padding-bottom: 40px;
+padding-bottom: var(--spacer);
 }
 
 .thumbnail {
@@ -56,7 +60,7 @@ padding-bottom: 40px;
 display: flex;
 gap: 5px;
 flex-direction: column;
-padding-bottom: 40px;
+padding-bottom: var(--spacer);
 border-bottom: 1px solid rgba(105, 105, 105, 0.5);
 }
 
@@ -212,7 +216,7 @@ p, h1, h2, h3, h4, li, figure {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: var(--spacer);
 }
 
 @media only screen and (max-width: 1111px) {        
@@ -279,7 +283,7 @@ p, h1, h2, h3, h4, li, figure {
   letter-spacing: 1pt;
   width: 100%;
   color: rgba(61,41,43,1);
-  margin-block: 40px;
+  margin-block: var(--spacer);
 }
 
 .block-content h2 {
@@ -315,7 +319,7 @@ p, h1, h2, h3, h4, li, figure {
   font-family: helvetica-w01-light, helvetica-w02-light, sans-serif;
   color: rgba(75, 75, 75);
   line-height: 1.5em;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacer);
 }
 
 .block-content em {
@@ -332,7 +336,7 @@ p, h1, h2, h3, h4, li, figure {
 
 .block-content img{
   object-fit: contain;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacer);
   margin-inline: auto;
 }
 
@@ -358,17 +362,17 @@ p, h1, h2, h3, h4, li, figure {
   width: 90vw;
   max-width: 750px;
   margin-inline: auto;
-  margin-top: -40px;
-  margin-bottom: 40px;
+  margin-top: calc( -1 * var(--spacer));
+  margin-bottom: var(--spacer);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 40px
+  gap: var(--spacer);
 } 
 
 .blog-socials ul {
   display: flex;
-  gap: 20px;
+  gap: calc(var(--spacer) / 2);
   list-style: none;
 }
 
@@ -414,7 +418,7 @@ padding-block: 0.5em;
 @media only screen and (max-width: 500px) {
 .blog-socials {
   flex-direction: column;
-  gap: 20px;
+  gap: calc(var(--spacer) / 2);
   align-items: flex-start;
 }
 }

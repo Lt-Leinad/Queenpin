@@ -392,29 +392,29 @@
 
 
 @media only screen and (max-width: 1200px) {
-    .section3-content {
+    .home-body .section3-content {
         flex-direction: column;
         gap: 20px;
     }
 
-    .section3-content-left {
-        gap: 0;
+    .home-body .section3-content-left {
+        gap: 0px;
     }
 
-    .section3-content-left h1 {
+    .home-body .section3-content-left h1 {
         font-size: clamp(28px, 7vw, 58px);
     }
 
-    .section3-content-left br {
+    .home-body .section3-content-left br {
         display: none;
     }
 
-    .section3-content-left button {
+    .home-body .section3-content-left button {
         font-size: 11px;
         /* padding-block: 0; */
     }
 
-    .section3-content-left {
+    .home-body .section3-content-left {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -433,6 +433,7 @@
     min-height: 100vh;
     max-width: 100vw;
     padding-block: var(--spacer);
+    margin-bottom: var(--spacer);
 }
 
 .home-body .section4 h1 {

@@ -1,6 +1,10 @@
+:root {
+    --testimonial-spacer: 80px;
+}
+
 /* -----SECTION 2----------- */
 
-.banner {
+.testimonials-body .banner {
     /* 1960 × 706 px */
     width: 100vw;
     background: url(/public/images/Testimonials_banner.webp);
@@ -9,15 +13,15 @@
     line-height: normal;
     font: normal normal normal 58px lulo-clean-w01-one-bold,lulo-clean-w05-one-bold,sans-serif;
     color: var(--pink);
-    padding-block: calc(2 * var(--spacer));
+    padding-block: calc(2 * var(--testimonial-spacer));
     background-size: cover;
     position: relative;
 }
 
 @media only screen and (max-width: 700px) {
-    .banner {
+    .testimonials-body .banner {
         font-size: 32px;
-        padding-block: calc(var(--spacer));
+        padding-block: calc(var(--testimonial-spacer));
     }
 }
 
@@ -55,14 +59,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: calc(var(--spacer)/2)
+    min-height: 100svh;
+    gap: calc(var(--testimonial-spacer)/2);
 }
 
 .testimonials-body .testimony {
     width: 90vw;
     max-width: 1000px;
     background-color: var(--pink);
-    padding: var(--spacer);
+    padding: var(--testimonial-spacer);
     box-shadow: 10px 10px 0px 0px rgba( 248,207,212, 0.5);
 }
 
@@ -104,7 +109,7 @@
 /* ------SECTION 3---------- */
 
 .testimonials-body .section3 {
-    margin-block: calc(var(--spacer)/2);
+    margin-block: calc(var(--testimonial-spacer)/2);
     background-color: var(--blue);
     padding-block: 40px;
 }
@@ -154,25 +159,25 @@
 
 
 @media only screen and (max-width: 1200px) {
-    .section3-content {
+    .testimonials-body .section3-content {
         flex-direction: column;
         gap: 20px;
     }
 
-    .section3-content-left h1 {
+    .testimonials-body .section3-content-left h1 {
         font-size: clamp(28px, 7vw, 58px);
     }
 
-    .section3-content-left br {
+    .testimonials-body .section3-content-left br {
         display: none;
     }
 
-    .section3-content-left button {
+    .testimonials-body .section3-content-left button {
         font-size: 11px;
         /* padding-block: 0; */
     }
 
-    .section3-content-left {
+    .testimonials-body .section3-content-left {
         display: flex;
         flex-direction: column;
         align-items: flex-end;

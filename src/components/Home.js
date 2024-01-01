@@ -1,11 +1,16 @@
 import React from "react";
 import "../components/Home.css";
+import { useRef } from "react";
 
 export default function Home() {
+  const contactModal = useRef(null);
+  const xOutFunc = function () {
+    contactModal.current.classList.add("display-none");
+  };
   return (
-    <div class="home-body">
-      <section class="section1">
-        <div class="section1-content">
+    <div className="home-body">
+      <section className="section1">
+        <div className="section1-content">
           <img src="/images/Home_s1_img.webp" alt="section1 img" />
           <h1>
             GROW YOUR PINTEREST, <br />
@@ -17,16 +22,16 @@ export default function Home() {
             customers. Leave it to me to boost your Pinterest presence and help
             you achieve your business goals!
           </p>
-          <a href="/Contact" class="section1-button section1-button1">
+          <a href="/Contact" className="section1-button section1-button1">
             <button>PERFECT YOUR PINTEREST TODAY!</button>
           </a>
-          <a href="/About" class="section1-button section1-button2">
+          <a href="/About" className="section1-button section1-button2">
             <button aria-label="Learn more about Queen Pin">LEARN MORE</button>
           </a>
         </div>
       </section>
-      <section class="section1-mob">
-        <div class="section1-mob-content">
+      <section className="section1-mob">
+        <div className="section1-mob-content">
           <h1>
             GROW YOUR PINTEREST, <br />
             GROW YOUR BUSINESS
@@ -37,11 +42,17 @@ export default function Home() {
             customers. Leave it to me to boost your Pinterest presence and help
             you achieve your business goals!
           </p>
-          <div class="section1-mob-button-container">
-            <a href="/Contact" class="section1-mob-button section1-mob-button1">
+          <div className="section1-mob-button-container">
+            <a
+              href="/Contact"
+              className="section1-mob-button section1-mob-button1"
+            >
               <button>PERFECT YOUR PINTEREST TODAY!</button>
             </a>
-            <a href="/About" class="section1-mob-button section1-mob-button2">
+            <a
+              href="/About"
+              className="section1-mob-button section1-mob-button2"
+            >
               <button aria-label="Learn more about Queen Pin">
                 LEARN MORE
               </button>
@@ -50,8 +61,8 @@ export default function Home() {
           <img src="/images/Home_s1_img.webp" alt="section1 img" />
         </div>
       </section>
-      <section class="section2 section ">
-        <div class="section2-content">
+      <section className="section2 section ">
+        <div className="section2-content">
           <p>
             "I absolutely LOVE working with Devorah! As a full-time food
             blogger, photographer, and influencer - it’s been impossible for me
@@ -67,22 +78,22 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section class="section3 section ">
-        <div class="section3-content">
-          <div class="section3-content-left">
+      <section className="section3 section ">
+        <div className="section3-content">
+          <div className="section3-content-left">
             <h1>
               FROM <br />
               THE <br />
               <span>BLOG</span>
             </h1>
-            <a href="/blog/blogposts/pinterest%20management-%20boosting%20blog%20success%20for%20food%20bloggers%20-%20a%20case%20study/">
+            <a href="/post/pinterest-management-boosting-blog-success-for-food-bloggers-a-case-study">
               <button>READ MORE</button>
             </a>
           </div>
           <img src="/images/Home_s3_img.webp" alt="Blog Post" />
         </div>
       </section>
-      <section class="section4 section ">
+      <section className="section4 section ">
         <h1>CONTACT</h1>
         <h2>
           <a
@@ -92,13 +103,13 @@ export default function Home() {
             queenpinpva@gmail.com
           </a>
         </h2>
-        <ul class="contact-list">
+        <ul className="contact-list">
           <li>
             <a
               href="https://pinterest.com/queenpinpva"
               aria-label="Social Media Link"
             >
-              <i class="fab fa-pinterest-p"></i>
+              <i className="fab fa-pinterest-p"></i>
             </a>
           </li>
           <li>
@@ -106,7 +117,7 @@ export default function Home() {
               href="https://www.instagram.com/queenpin.online/"
               aria-label="Social Media Link"
             >
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
           </li>
           <li>
@@ -114,7 +125,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/devorah-gurevich/"
               aria-label="Social Media Link"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <i className="fab fa-linkedin-in"></i>
             </a>
           </li>
           <li>
@@ -122,33 +133,32 @@ export default function Home() {
               href="https://www.facebook.com/queenpin.va"
               aria-label="Social Media Link"
             >
-              <i class="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f"></i>
             </a>
           </li>
         </ul>
 
         <form
-          class="form"
+          className="form"
           name="Queenpin-Contact-Form-Home-Page"
           method="POST"
           data-netlify="true"
           onSubmit="submit"
           action="/formSubmit/index.html"
         >
-          <p class="form-section">
+          <p className="form-section">
             <label>
               Name * <br />
               <input
                 type="text"
                 name="name"
                 placeholder="Enter your name"
-                onfocus="formSectionFocusFunc(0)"
                 required
               />
             </label>
           </p>
 
-          <p class="form-section">
+          <p className="form-section">
             <label>
               Email *<br />
               <input
@@ -156,13 +166,12 @@ export default function Home() {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                onfocus="formSectionFocusFunc(1)"
                 required
               />
             </label>
           </p>
 
-          <p class="form-section">
+          <p className="form-section">
             <label>
               Phone Number
               <br />
@@ -171,12 +180,11 @@ export default function Home() {
                 type="tel"
                 name="phone number"
                 placeholder="Enter your phone number"
-                onfocus="formSectionFocusFunc(2)"
               />
             </label>
           </p>
 
-          <p class="form-section">
+          <p className="form-section">
             <label>
               Subject *<br />
               <input
@@ -184,13 +192,12 @@ export default function Home() {
                 type="text"
                 name="subject"
                 placeholder="Type the subject"
-                onfocus="formSectionFocusFunc(3)"
                 required
               />
             </label>
           </p>
 
-          <p class="form-section">
+          <p className="form-section">
             <label>
               Message *<br />
               <textarea
@@ -198,28 +205,27 @@ export default function Home() {
                 id="msg-box"
                 name="message"
                 placeholder="Type your message here..."
-                onfocus="formSectionFocusFunc(4)"
                 required
               ></textarea>
             </label>
           </p>
 
           <p>
-            <button class="form-button" type="submit">
+            <button className="form-button" type="submit">
               SUBMIT
             </button>
           </p>
         </form>
       </section>
-      <div class="contact-modal display-none">
-        <div class="x-out-container">
-          <button class="x-out-btn" onclick="xOutFunc()">
+      <div className="contact-modal display-none" ref={contactModal}>
+        <div className="x-out-container">
+          <button className="x-out-btn" onClick={xOutFunc}>
             X
           </button>
         </div>
         <h1>Perfect Your Pinterest Today With a FREE Consultation!</h1>
         <a href="/Contact/index.html">
-          <button class="get-in-touch">GET IN TOUCH</button>
+          <button className="get-in-touch">GET IN TOUCH</button>
         </a>
         <img src="" alt="Phone" />
       </div>

@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Testimonials from "./components/Testimonials";
-import Project from "./components/Project";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 import Post from "./components/Post";
 import SinglePost from "./components/SinglePost";
 import Navbar from "./components/Navbar";
@@ -18,7 +19,8 @@ function App() {
         <Route element={<Testimonials />} path="/testimonials" />
         <Route element={<SinglePost />} path="/post/:slug" />
         <Route element={<Post />} path="/post" />
-        <Route element={<Project />} path="/project" />
+        <Route element={<Services />} path="/services" />
+        <Route element={<Contact />} path="/contact" />
       </Routes>
       <Footer />
     </Router>

@@ -9,10 +9,6 @@
       content="Queen Pin - Pinterest Management Services"
     />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -25,7 +21,7 @@
       defer
       async
     ></script>
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/../favicon.ico" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -55,5 +51,173 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <form
+      name="Queenpin-Contact-Form-Home-Page"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone number" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+    <form
+      name="Queenpin-Contact-Form-Services-Page"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone number" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <form
+          className="form"
+          name="Queenpin-Contact-Form-Home-Page"
+          method="POST"
+          data-netlify="true"
+          onSubmit="submit"
+          action="/formSubmit/index.html"
+        >
+          <p className="form-section">
+            <label>
+              Name * <br />
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </label>
+          </p>
+
+          <p className="form-section">
+            <label>
+              Email *<br />
+              <input
+                id="email-box"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </label>
+          </p>
+
+          <p className="form-section">
+            <label>
+              Phone Number
+              <br />
+              <input
+                id="phone-number-box"
+                type="tel"
+                name="phone number"
+                placeholder="Enter your phone number"
+              />
+            </label>
+          </p>
+
+          <p className="form-section">
+            <label>
+              Subject *<br />
+              <input
+                id="subject-box"
+                type="text"
+                name="subject"
+                placeholder="Type the subject"
+                required
+              />
+            </label>
+          </p>
+
+          <p className="form-section">
+            <label>
+              Message *<br />
+              <textarea
+                type="text"
+                id="msg-box"
+                name="message"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+            </label>
+          </p>
+
+          <p>
+            <button className="form-button" type="submit">
+              SUBMIT
+            </button>
+          </p>
+        </form>,
+        document.getElementById("root")
+      );
+    </script>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <form
+          className="form"
+          name="Queenpin-Contact-Form-Services-Page"
+          method="POST"
+          data-netlify="true"
+          onSubmit="submit"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p className="form-section">
+            <input type="text" name="name" placeholder="Name *" required />
+          </p>
+
+          <p className="form-section double-form-section">
+            <input
+              id="email-box"
+              type="email"
+              name="email"
+              placeholder="Email *"
+              required
+            />
+            <input
+              id="phone-number-box"
+              type="tel"
+              name="phone number"
+              placeholder="Phone Number"
+            />
+          </p>
+
+          <p className="form-section">
+            <input
+              id="subject-box"
+              type="text"
+              name="subject"
+              placeholder="Subject *"
+              required
+            />
+          </p>
+
+          <p className="form-section">
+            <textarea
+              type="text"
+              id="msg-box"
+              name="message"
+              placeholder="Message *"
+              required
+            ></textarea>
+          </p>
+
+          <p>
+            <button className="form-button" type="submit">
+              SUBMIT
+            </button>
+          </p>
+        </form>,
+        document.getElementById("root")
+      );
+    </script>
   </body>
 </html>

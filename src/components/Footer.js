@@ -25,41 +25,49 @@ export default function Footer() {
           <ul className="socials">
             <li>
               <a
-                href="https://pinterest.com/queenpinpva"
+                href="https://www.pinterest.co.uk/QueenPinOnline/"
+                target="_blank"
+                rel="noreferrer"
                 aria-label="Social Media Link"
               >
                 <p>
-                  <i class="fab fa-pinterest-p"></i>
+                  <i className="fab fa-pinterest-p"></i>
                 </p>
               </a>
             </li>
             <li>
               <a
                 href="https://www.instagram.com/queenpin.online/"
+                target="_blank"
+                rel="noreferrer"
                 aria-label="Social Media Link"
               >
                 <p>
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </p>
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/devorah-gurevich/"
+                target="_blank"
+                rel="noreferrer"
                 aria-label="Social Media Link"
               >
                 <p>
-                  <i class="fab fa-linkedin-in"></i>
+                  <i className="fab fa-linkedin-in"></i>
                 </p>
               </a>
             </li>
             <li>
               <a
                 href="https://www.facebook.com/queenpin.va"
+                target="_blank"
+                rel="noreferrer"
                 aria-label="Social Media Link"
               >
                 <p>
-                  <i class="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </p>
               </a>
             </li>
@@ -71,7 +79,11 @@ export default function Footer() {
           <p>Pinterest Management Services</p>
         </li>
         <li>
-          <a href="/components/Privacy Policy _ Queen Pin.pdf">
+          <a
+            href="../Privacy Policy _ Queen Pin.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
             <p>Privacy Policy</p>
           </a>
         </li>
@@ -79,7 +91,7 @@ export default function Footer() {
           <p>All Rights Reserved</p>
         </li>
       </ul>
-      <a href="https://danielfeddy.com">
+      <a href="https://danielfeddy.com" target="_blank" rel="noreferrer">
         <p>Website by Daniel Feddy</p>
       </a>
     </div>
