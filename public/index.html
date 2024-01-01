@@ -78,14 +78,12 @@
 
     <script type="text/babel">
       ReactDOM.render(
-        <form
-          className="form"
-          name="Queenpin-Contact-Form-Home-Page"
-          method="POST"
-          data-netlify="true"
-          onSubmit="submit"
-          action="/formSubmit/index.html"
-        >
+        <form method="POST" name="Queenpin-Contact-Form-Home-Page">
+          <input
+            type="hidden"
+            name="form-name"
+            value="Queenpin-Contact-Form-Home-Page"
+          />
           <p className="form-section">
             <label>
               Name * <br />
@@ -162,14 +160,12 @@
 
     <script type="text/babel">
       ReactDOM.render(
-        <form
-          className="form"
-          name="Queenpin-Contact-Form-Services-Page"
-          method="POST"
-          data-netlify="true"
-          onSubmit="submit"
-        >
-          <input type="hidden" name="form-name" value="contact" />
+        <form method="POST" name="Queenpin-Contact-Form-Services-Page">
+          <input
+            type="hidden"
+            name="form-name"
+            value="Queenpin-Contact-Form-Services-Page"
+          />
           <p className="form-section">
             <input type="text" name="name" placeholder="Name *" required />
           </p>
