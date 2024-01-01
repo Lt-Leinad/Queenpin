@@ -113,13 +113,17 @@ export default function Services() {
         <img src="/images/laptop_img.webp" alt="laptop" />
         <h1>CURIOUS ABOUT PRICING?</h1>
         <form
-          className="form"
           name="Queenpin-Contact-Form-Services-Page"
-          method="POST"
+          method="post"
           data-netlify="true"
+          className="form"
           onSubmit="submit"
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input
+            type="hidden"
+            name="form-name"
+            value="Queenpin-Contact-Form-Services-Page"
+          />
           <p className="form-section">
             <input type="text" name="name" placeholder="Name *" required />
           </p>

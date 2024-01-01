@@ -139,13 +139,17 @@ export default function Home() {
         </ul>
 
         <form
-          className="form"
           name="Queenpin-Contact-Form-Home-Page"
           method="POST"
           data-netlify="true"
+          className="form"
           onSubmit="submit"
-          action="/formSubmit/index.html"
         >
+          <input
+            type="hidden"
+            name="form-name"
+            value="Queenpin-Contact-Form-Home-Page"
+          />
           <p className="form-section">
             <label>
               Name * <br />
