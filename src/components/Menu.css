@@ -65,9 +65,9 @@
   }
 
 .menu {
-  height: 100vh;
+  height: 100svh;
   padding-block: 120px;
-  width: 100vw;
+  width: 100svw;
   position: fixed;
   top: 0;
   overflow: scroll;

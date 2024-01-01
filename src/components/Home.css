@@ -430,8 +430,8 @@
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
-    min-height: 100vh;
-    max-width: 100vw;
+    min-height: 100svh;
+    max-width: 100svw;
     padding-block: var(--spacer);
     margin-bottom: var(--spacer);
 }

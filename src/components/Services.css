@@ -372,8 +372,8 @@
 .services-popup {
     box-sizing: border-box;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 50svh;
+    left: 50svw;
     transform: translate(-50%, -50%);
     background: var(--blue);
     border: 3px solid var(--blue);

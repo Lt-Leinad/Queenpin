@@ -43,7 +43,7 @@ box-sizing: border-box;
 }
 
 .body {
-min-height: calc(100dvh - 178px);
+min-height: calc(100svh - 178px);
 width: 90dvw;
 max-width: 980px;
 margin-inline: auto;
@@ -209,7 +209,7 @@ p, h1, h2, h3, h4, li, figure {
 }
 
 .post-body {
-  min-height: calc(100dvh - 178px);
+  min-height: calc(100svh - 178px);
   max-width: 750px;
   width: 90dvw;
   margin-inline: auto;
@@ -224,7 +224,7 @@ p, h1, h2, h3, h4, li, figure {
   top: 100px;
 }
 .post-body {
-  min-height: calc(100dvh - 80px);
+  min-height: calc(100svh - 80px);
 }
 }
 
