@@ -50,7 +50,7 @@ export default function Navbar() {
   };
 
   const navLinkFunc = function () {
-    window.scrollY(0);
+    window.scrollTo(0, 0);
     hamburgerFunc();
   };
   return (
