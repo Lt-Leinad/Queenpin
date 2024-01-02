@@ -22,6 +22,8 @@ export default function Post() {
         title, 
         slug,
         snippet,
+        publishedAt, 
+        readTime,
         author,
         "authorImage":author->image, 
         mainImage{
@@ -87,7 +89,15 @@ export default function Post() {
                   />
                   <div className="credits">
                     <p className="author">Devorah Gurevich</p>
-                    <p className="times">Sep 28 - 2 min read</p>
+                    <p className="times">
+                      {new Date(
+                        Date.parse(post.publishedAt)
+                      ).toLocaleDateString("en-us", {
+                        month: "short",
+                        day: "numeric",
+                      })}{" "}
+                      - {post.readTime} read
+                    </p>
                   </div>
                 </div>
               </div>
