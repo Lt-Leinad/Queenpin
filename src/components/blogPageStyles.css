@@ -275,6 +275,17 @@ p, h1, h2, h3, h4, li, figure {
 
 .block-content a {
   text-decoration: underline;
+  color: var(--orange);
+}
+
+.block-content blockquote {
+  border-left: 2px solid var(--orange);
+  font-size: 18px;
+  font-family: helvetica-w01-light, helvetica-w02-light, sans-serif;
+  color: rgba(75, 75, 75);
+  line-height: 1.5em;
+  margin-bottom: var(--spacer);
+  padding-left: 20px;
 }
 
 .post-body h1 {
