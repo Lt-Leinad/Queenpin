@@ -91,6 +91,7 @@
     max-width: 1000px;
     height: 45vw;
     border: none;
+    background: url(../../public/images/loading_gif.gif) center top no-repeat;
 }
 
 .Calendly iframe {
