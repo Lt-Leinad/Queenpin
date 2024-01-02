@@ -3,9 +3,13 @@ import "../components/Home.css";
 
 export default function Home() {
   if (window.innerWidth > 800 && window.innerHeight > 650) {
-    setTimeout(function () {
-      document.querySelector(".contact-modal").classList.remove("display-none");
-    }, 3000);
+    window.addEventListener("load", () => {
+      setTimeout(function () {
+        document
+          .querySelector(".contact-modal")
+          .classList.remove("display-none");
+      }, 3000);
+    });
   }
 
   const xOutFunc = function () {
