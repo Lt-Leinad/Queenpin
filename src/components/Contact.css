@@ -89,9 +89,8 @@
     margin-block: 40px;
     width: 90vw;
     max-width: 1000px;
-    height: 45vw;
+    height: 750px;
     border: none;
-    background: url(../../public/images/loading_gif.gif) center top no-repeat;
 }
 
 .Calendly iframe {
@@ -104,7 +103,7 @@
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1115px) {
     .contact-block {
         flex-direction: column;
     }
@@ -116,6 +115,10 @@
     .contact-details {
         width: 100%;
         padding-block: 40px;
+    }
+
+    .Calendly {
+        height: 1100px;
     }
 }
 
@@ -140,6 +143,6 @@
 @media only screen and (max-width: 720px) {
 
     .Calendly {
-        height: 90vw;
+        height: 975px;
     }
 }
