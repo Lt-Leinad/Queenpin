@@ -10,7 +10,6 @@ function urlFor(source) {
 }
 
 let constPostData;
-
 export default function Post() {
   const [postData, setPost] = useState(null);
   const searchBarInput = useRef();
