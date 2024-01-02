@@ -37,7 +37,13 @@ export default function Post() {
       )
       .then((data) => {
         constPostData = data;
-        setPost(data);
+        setPost(
+          data.sort(
+            (a, b) =>
+              new Date(a.publishedAt).getMonth() -
+              new Date(b.publishedAt).getMonth()
+          )
+        );
       })
       .catch(console.error);
   }, []);
