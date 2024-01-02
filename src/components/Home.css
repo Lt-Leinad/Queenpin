@@ -433,7 +433,6 @@
     min-height: 100svh;
     max-width: 100svw;
     padding-block: var(--spacer);
-    margin-bottom: var(--spacer);
 }
 
 .home-body .section4 h1 {
