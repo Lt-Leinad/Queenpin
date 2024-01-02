@@ -1,12 +1,17 @@
 import React from "react";
 import "../components/Home.css";
-import { useRef } from "react";
 
 export default function Home() {
-  const contactModal = useRef(null);
+  if (window.innerWidth > 800 && window.innerHeight > 650) {
+    setTimeout(function () {
+      document.querySelector(".contact-modal").classList.remove("display-none");
+    }, 3000);
+  }
+
   const xOutFunc = function () {
-    contactModal.current.classList.add("display-none");
+    document.querySelector(".contact-modal").classList.add("display-none");
   };
+
   return (
     <div className="home-body">
       <section className="section1">
@@ -221,17 +226,16 @@ export default function Home() {
           </p>
         </form>
       </section>
-      <div className="contact-modal display-none" ref={contactModal}>
+      <div className="contact-modal display-none">
         <div className="x-out-container">
           <button className="x-out-btn" onClick={xOutFunc}>
             X
           </button>
         </div>
         <h1>Perfect Your Pinterest Today With a FREE Consultation!</h1>
-        <a href="/Contact/index.html">
+        <a href="/Contact">
           <button className="get-in-touch">GET IN TOUCH</button>
         </a>
-        <img src="" alt="Phone" />
       </div>
     </div>
   );

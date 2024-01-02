@@ -575,7 +575,7 @@
     left: 50%;
     margin-left: 0;
     transform: translate(-50%, -50%);
-    /* background: url(/photos/phone_img.webp); */
+    background: url(../../public/images/phone_img.webp);
     background-color: var(--yellow);
     background-position: 50% calc(50% + 15px);
     background-repeat: no-repeat;
