@@ -192,7 +192,7 @@ width: 100%;
 }
 
 @media only screen and (max-width: 480px) {
-  .post-body h1, .block-content, .details, .title, .snippet {
+  .post-body h1, .details, .title, .snippet {
     width: 90dvw;
     margin-inline: auto;
 }
@@ -269,6 +269,8 @@ p, h1, h2, h3, h4, li, figure {
 .block-content {
   display: flex;
   flex-direction: column;
+  width: 100dvw;
+  max-width: 750px;
 }
 
 .block-content a {
@@ -338,6 +340,7 @@ p, h1, h2, h3, h4, li, figure {
   object-fit: contain;
   margin-bottom: var(--spacer);
   margin-inline: auto;
+  max-width: 100dvw;
 }
 
 @media only screen and (max-width: 500px) {
@@ -352,6 +355,13 @@ p, h1, h2, h3, h4, li, figure {
       font-size: 28px;
       letter-spacing: -0.1em;
   }
+
+  .block-content h2, 
+  .block-content h2, 
+  .block-content h2, 
+  .block-content p {
+    padding-inline: min(40px, 5dvw);
+  } 
 
 }
 

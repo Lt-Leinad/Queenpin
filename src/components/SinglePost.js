@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import imageUrlBuilder from "@sanity/image-url";
+import Navbar from "./Navbar";
 import BlockContent from "@sanity/block-content-to-react";
 import client from "../client";
 import "../components/blogPageStyles.css";
@@ -12,6 +13,9 @@ function urlFor(source) {
 }
 
 export default function SinglePost() {
+  (function scrollUp() {
+    window.scrollTo(0, 0);
+  })();
   const [singlePost, setSinglePost] = useState(null);
   const { slug } = useParams();
 

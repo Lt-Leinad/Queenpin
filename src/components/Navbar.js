@@ -21,12 +21,14 @@ export default function Navbar() {
 
   window.addEventListener("scroll", function () {
     setScrolling();
-    if (this.window.scrollY > 160) {
+    if (window.scrollY > 160) {
       if (scrolling[1] > scrolling[0]) {
         document.querySelector(".header-mob").style.marginTop = "-80px";
       } else {
         document.querySelector(".header-mob").style.marginTop = "0px";
       }
+    } else {
+      document.querySelector(".header-mob").style.marginTop = "0px";
     }
   });
   const hamburgerFunc = function () {
