@@ -397,15 +397,17 @@ p, h1, h2, h3, h4, li, figure {
   list-style: none;
 }
 
-.blog-socials ul li a, .blog-socials ul li a {
+.blog-socials ul li a, .blog-socials ul li button {
   color: rgba(75, 75, 75, 1);
   transition-duration: 250ms;
   height: 100%;
   display: flex;
   align-items: center;
+  background: none;
+  border: none;
 }
 
-.blog-socials ul li a:hover, .blog-socials ul li a:not(.share):hover {
+.blog-socials ul li a:hover, .blog-socials ul li a:not(.share):hover, .blog-socials ul li button:hover {
   cursor: pointer;
   color: rgb(151,210,227);
 }

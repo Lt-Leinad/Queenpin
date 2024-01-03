@@ -2,6 +2,9 @@ import React from "react";
 import "../components/About.css";
 
 export default function About() {
+  (function scrollUp() {
+    window.scrollTo(0, 0);
+  })();
   return (
     <div className="about-body">
       <img src="/images/Dev_Profile.webp" alt="Devorah Gurevich" />

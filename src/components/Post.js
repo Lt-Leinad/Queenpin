@@ -11,6 +11,9 @@ function urlFor(source) {
 
 let constPostData;
 export default function Post() {
+  (function scrollUp() {
+    window.scrollTo(0, 0);
+  })();
   const [postData, setPost] = useState(null);
   const searchBarInput = useRef();
 
@@ -35,14 +38,11 @@ export default function Post() {
     }`
       )
       .then((data) => {
-        constPostData = data;
-        setPost(
-          data.sort(
-            (a, b) =>
-              new Date(a.publishedAt).getMonth() -
-              new Date(b.publishedAt).getMonth()
-          )
+        data = data.sort(
+          (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
         );
+        constPostData = data;
+        setPost(data);
       })
       .catch(console.error);
   }, []);
@@ -100,6 +100,7 @@ export default function Post() {
                       ).toLocaleDateString("en-us", {
                         month: "short",
                         day: "numeric",
+                        year: "numeric",
                       })}{" "}
                       - {post.readTime} read
                     </p>

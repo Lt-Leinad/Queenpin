@@ -2,6 +2,9 @@ import React from "react";
 import "../components/Home.css";
 
 export default function Home() {
+  (function scrollUp() {
+    window.scrollTo(0, 0);
+  })();
   if (window.innerWidth > 800 && window.innerHeight > 650) {
     window.addEventListener("load", () => {
       setTimeout(function () {

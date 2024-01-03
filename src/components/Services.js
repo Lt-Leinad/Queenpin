@@ -3,6 +3,9 @@ import "../components/Services.css";
 import { useRef } from "react";
 
 export default function Services() {
+  (function scrollUp() {
+    window.scrollTo(0, 0);
+  })();
   const service = useRef(null);
   const servicesPopUpFunc = function (e) {
     let popup = +[...e.target.classList][0].at(-1) - 1;

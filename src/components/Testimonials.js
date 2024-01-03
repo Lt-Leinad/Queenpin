@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import client from "../client";
 
 export default function Testimonial() {
+  (function scrollUp() {
+    window.scrollTo(0, 0);
+  })();
   const [testimonyData, setTestimonials] = useState(null);
 
   useEffect(() => {

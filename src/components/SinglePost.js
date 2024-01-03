@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import imageUrlBuilder from "@sanity/image-url";
-import Navbar from "./Navbar";
 import BlockContent from "@sanity/block-content-to-react";
 import client from "../client";
 import "../components/blogPageStyles.css";
@@ -12,10 +11,15 @@ function urlFor(source) {
   return builder.image(source);
 }
 
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(window.location);
+};
+
 export default function SinglePost() {
   (function scrollUp() {
     window.scrollTo(0, 0);
   })();
+
   const [singlePost, setSinglePost] = useState(null);
   const { slug } = useParams();
 
@@ -68,6 +72,7 @@ export default function SinglePost() {
                 ).toLocaleDateString("en-us", {
                   month: "short",
                   day: "numeric",
+                  year: "numeric",
                 })}{" "}
                 - {singlePost.readTime} read
               </p>
@@ -90,7 +95,7 @@ export default function SinglePost() {
         </div>
       </div>
       <div className="blog-socials">
-        <Link className="socials-contact" to={"/"}>
+        <Link className="socials-contact" to={"/contact"}>
           <button>Contact Us</button>
         </Link>
         <ul>
@@ -120,14 +125,14 @@ export default function SinglePost() {
             </a>
           </li>
           <li>
-            <a
-              href={"/"}
+            <button
               className="clipBoardLink"
               title="Copy to clipboard"
+              onClick={copyToClipboard}
               aria-label="Share Post on Social Media Link"
             >
               <i className="fa-solid fa-paperclip"></i>
-            </a>
+            </button>
           </li>
         </ul>
       </div>

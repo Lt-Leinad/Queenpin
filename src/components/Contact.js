@@ -2,6 +2,9 @@ import React from "react";
 import "../components/Contact.css";
 
 export default function Contact() {
+  (function scrollUp() {
+    window.scrollTo(0, 0);
+  })();
   return (
     <div className="contact-body">
       <h1>BOOK A CHAT</h1>
